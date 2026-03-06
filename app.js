@@ -1,6 +1,7 @@
 require('dotenv').config();
 require('express-async-errors');
 
+const path = require('path')
 // extra security packages
 const helmet = require('helmet');
 const cors = require('cors');
