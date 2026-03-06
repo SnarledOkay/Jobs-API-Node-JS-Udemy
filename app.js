@@ -22,6 +22,7 @@ const authRouter = require('./routes/auth');
 const jobsRouter = require('./routes/jobs');
 
 //Set up front-end
+app.use(express.static(path.resolve(__dirname,'./client/build')))
 app.get('*', (req,res)=>{
   res.sendFile(path.resolve(__dirname,'./client/build', 'index.html'))
 });
